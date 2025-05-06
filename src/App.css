@@ -1,0 +1,13 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Add padding top to account for fixed header */
+main {
+  padding-top: 5rem; /* Adjust this value based on your header height */
+  min-height: 100vh;
+  width: 100%;
+}
+
