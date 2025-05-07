@@ -10,11 +10,12 @@ function App() {
   const [busqueda, setBusqueda] = useState<string>('');
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/items?q=${encodeURIComponent(busqueda)}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/items?q=${encodeURIComponent(busqueda)}`);
+      console.log(response);
       const data = await response.json();
       if (data.status !== 200) {
         setItems([]);
-        throw new Error(`HTTP error! status: ${data.message}`);
+        // throw new Error(`HTTP error! status: ${data.message}`);
       }
       setItems(data.data);
     } catch (err) {

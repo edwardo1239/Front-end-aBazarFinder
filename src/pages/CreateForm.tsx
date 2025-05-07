@@ -32,8 +32,7 @@ export default function CreateForm() {
             setLoading(true)
             const result = validateForm(formSchema)
             if (!result) return
-
-            const response = await fetch("http://localhost:3000/api/items", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/items`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

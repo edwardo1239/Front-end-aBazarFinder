@@ -5,7 +5,7 @@ type propsType = {
     item: FormData;
 }
 export default function TarjetaLista(props:propsType) {
-    const { titulo, descripcion, precio, categoria, _id } = props.item as any;
+    const { titulo, precio, categoria, _id } = props.item as any;
     const imagen = "/item_logo.webp"; // Imagen local del proyecto
     const puntuacion = 4.2; // Puntuación fija de ejemplo
     const navigate = useNavigate();

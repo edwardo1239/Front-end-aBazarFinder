@@ -12,7 +12,7 @@ export default function ItemDetalles() {
   useEffect(() => {
     const obtenerDetalleData = async (id: string) => {
       try {
-        const response = await fetch(`http://localhost:3000/api/items/${id}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/items/${id}`);
         const data = await response.json();
         if (data.status !== 200) {
           throw new Error(data.message || "Error al obtener el detalle del item");
