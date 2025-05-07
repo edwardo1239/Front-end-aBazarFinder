@@ -15,6 +15,7 @@ function App() {
       const data = await response.json();
       if (data.status !== 200) {
         setItems([]);
+        return;
         // throw new Error(`HTTP error! status: ${data.message}`);
       }
       setItems(data.data);

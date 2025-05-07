@@ -22,7 +22,7 @@ export default function SearchInput(props: propsType) {
                     <input
                         type="text"
                         onChange={(e) => props.setBusqueda(e.target.value)}
-                        placeholder="Buscar por nombre..."
+                        placeholder="Buscar por nombre o por categoria..."
                         className="flex-grow p-3 border border-gray-300 rounded-l-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <button
